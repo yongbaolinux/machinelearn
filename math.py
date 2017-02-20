@@ -14,6 +14,14 @@ class Math:
 					inverseNum += 1;
 		return inverseNum;
 	
+	
+    # 计算一个数列的子数列全组合
+    # arr 原始数列
+    # base 子数列的元素个数
+    def list 
+
+
+	
 #math  = Math();
 #print math.listInverseNum([1,4,2,3,5]);
 
