@@ -118,6 +118,7 @@ class Matrix:
 				matrix_[i][j] = matrix[j][i];
 		return matrix_;
 
+	
 #matrix = Matrix();
 #result = matrix.matrixMulti([['1','2'],['3','4']],[['1','2'],['3','4']]);
 #matrix_.matrixPrint([['a','b','c'],['a','b','c'],['a','b','c']]);
