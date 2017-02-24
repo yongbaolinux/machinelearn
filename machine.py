@@ -33,10 +33,13 @@ for index,i in enumerate(x):
 	plot.plot([i,i],[y[index],yr[index]],'o-')
 #plot.show()
 import numpy
+
 #print numpy.mean((model.predict(x) - y) ** 2)
 print numpy.mean([1,2,3,4,5])
 
  
+
+print numpy.mean((model.predict(x) - y) ** 2)
 
 # import numpy as np
 # import matplotlib.pyplot as plt
