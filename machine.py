@@ -10,18 +10,21 @@ def  runplot():
 	plt.grid(True)
 	return plt
 plot = runplot()
-x = [[6],[8],[10],[14],[18]]
-y = [[7],[9],[13],[17.5],[18]]
+#x = [[6],[8],[10],[14],[18]]
+#y = [[7],[9],[13],[17.5],[18]]
+label="cos(x2)") 
 plot.plot(x,y,'k.')
+plot.show()
 
-from sklearn.linear_model import LinearRegression
-model = LinearRegression()
-model.fit(x,y)			#training
-x2 = [[0],[8],[10],[15],[20]]
-y2 =  model.predict(x2)	#predict
-y3 = [14.25,14.25,14.25,14.25,14.25]
-y4 = y2 * 0.5 + 5
-plot.plot(x2,y2,'g-.')
+# from sklearn.linear_model import LinearRegression
+# model = LinearRegression()
+# model.fit(x,y)			#training
+# x2 = [[0],[8],[10],[15],[20]]
+# y2 =  model.predict(x2)	#predict
+# y3 = [14.25,14.25,14.25,14.25,14.25]
+# y4 = y2 * 0.5 + 5
+# plot.plot(x2,y2,'g-.')
+
 #plot.plot(x2,y3,'r-.')
 #plot.plot(x2,y4,'y-.')
 
