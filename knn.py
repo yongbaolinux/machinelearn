@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 from os import listdir
-#import numpy
+import numpy
 from numpy import *
 import operator
 
@@ -57,5 +57,5 @@ def getDir(trainingDirName,testDirName):
 			errorCount += 1
 	print "the errorCount is %d" % (errorCount)
 	print "the error of rate is %f" % (errorCount/float(testFileCount))
-getDir('/root/文档/machinelearninginaction/Ch02/trainingDigits','/root/文档/machinelearninginaction/Ch02/testDigits')
+#getDir('/root/文档/machinelearninginaction/Ch02/trainingDigits','/root/文档/machinelearninginaction/Ch02/testDigits')
 
