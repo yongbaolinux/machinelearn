@@ -58,5 +58,5 @@ def getDir(trainingDirName,testDirName):
 			errorCount += 1
 	print "the errorCount is %d" % (errorCount)
 	print "the error of rate is %f" % (errorCount/float(testFileCount))
-#getDir('/root/文档/machinelearninginaction/Ch02/trainingDigits','/root/文档/machinelearninginaction/Ch02/testDigits')
+#getDir('./trainingDigits','/root/文档/machinelearninginaction/Ch02/testDigits')
 
