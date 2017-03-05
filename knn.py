@@ -24,6 +24,7 @@ def classify(inX, dataSet, labels, k):
     sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
 
+
 def file2Data(filename):
 	 file_handle = open(filename)
 	 vector = zeros(1024)
