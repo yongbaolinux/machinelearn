@@ -18,7 +18,6 @@ class Math:
     # 计算一个数列的子数列全组合
     # arr 原始数列
     # base 子数列的元素个数
-    def list 
 
 
 	
