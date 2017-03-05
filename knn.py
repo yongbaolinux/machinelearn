@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 from os import listdir
-#import numpy
+import numpy
 from numpy import *
 import operator
 
