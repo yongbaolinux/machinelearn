@@ -3,9 +3,8 @@
 
 from numpy import *
 from PIL import Image
-imageHandler = Image.open('./3')
-#print type(imageHandler)
-#imageHandler.save('./2', "JPEG")
+imageHandler = Image.open('./5')
+from knn import *
 width,height = imageHandler.size
 imgData = list(imageHandler.getdata())
 
@@ -58,7 +57,7 @@ for j in range(height):
     if sum_  < 5:
         left_y += 1
     else:
-        break;
+        break
 #left_x
 for i in range(width):
     sum_ = 0
@@ -76,7 +75,7 @@ for j in range(height-1,-1,-1):
     sum_ = 0
     for i in range(width):
         sum_ += int(matrix[j*width+ i])
-    if sum_ < 5:
+    if sum_ < 3:
         right_y -= 1
     else:
         break
@@ -104,7 +103,7 @@ x_unit = (right_x -  left_x) / goal_x         #宽度循环块单位
 y_unit = (right_y - left_y) / goal_y          #高度循环块单位
 
 matrix_ = zeros(goal_x*goal_y)                 #生成初始化都为0的矩阵 用来存放压缩后的图像信息
-matrix_index = -1;                                              #压缩后图像存放矩阵索引
+matrix_index = -1                                              #压缩后图像存放矩阵索引
 
 for y in range(left_y,left_y+goal_y*y_unit,y_unit):
     for x in range(left_x,left_x+goal_x*x_unit,x_unit):
@@ -124,6 +123,8 @@ for k,v in enumerate(matrix_):
     if ((k+1) % 32) == 0:
         writeHandler.write('\n')
 writeHandler.close()
+
+getFile('./trainingDigits','./goal.txt')
 
 '''writeHandler = open('./2.txt','w')
 for j in range(left_y,right_y):
