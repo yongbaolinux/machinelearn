@@ -21,7 +21,7 @@ def classify(inX, dataSet, labels, k):
     for i in range(k):
         voteIlabel = labels[sortedDistIndicies[i]]
         classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1
-    #print classCount
+    print classCount
     sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
 
@@ -76,5 +76,3 @@ def getFile(trainingDirName,testFileName):
 	testResult = classify(testData,trainingDataSet,trainingResult,10)
 	#print "the testResult  is %d ,the trueResult is %d"  %(testResult,3)
 	print "the testResult  is %d" % (testResult)
-
-
