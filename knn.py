@@ -21,6 +21,7 @@ def classify(inX, dataSet, labels, k):
     for i in range(k):
         voteIlabel = labels[sortedDistIndicies[i]]
         classCount[voteIlabel] = classCount.get(voteIlabel,0) + 1
+    print classCount
     sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
 
@@ -59,4 +60,21 @@ def getDir(trainingDirName,testDirName):
 	print "the errorCount is %d" % (errorCount)
 	print "the error of rate is %f" % (errorCount/float(testFileCount))
 #getDir('./trainingDigits','/root/文档/machinelearninginaction/Ch02/testDigits')
+
+def getFile(trainingDirName,testFileName):
+	trainingFileNames = listdir(trainingDirName)
+	trainingFileCount = len(trainingFileNames)
+	trainingDataSet = zeros((trainingFileCount,1024))
+	trainingResult = zeros((trainingFileCount))
+	for i in range(trainingFileCount):
+		trainingFileName = trainingFileNames[i]
+		trainingDataSet[i] = file2Data(trainingDirName+'/'+trainingFileName)
+		trainingResult[i] = int(trainingFileName.split('.')[0].split('_')[0]);
+
+
+	testData =  file2Data(testFileName)
+	testResult = classify(testData,trainingDataSet,trainingResult,10)
+	print "the testResult  is %d ,the trueResult is %d"  %(testResult,3)
+
+getFile('./trainingDigits','./goal.txt')
 
