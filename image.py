@@ -1,9 +1,12 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-from PIL import Image
-imageHandler = Image.open('./4')
 from knn import *
+from PIL import Image
+from sys import argv
+
+
+imageHandler = Image.open(argv[1])
 width,height = imageHandler.size
 imgData = list(imageHandler.getdata())
 
