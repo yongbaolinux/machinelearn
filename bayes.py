@@ -33,4 +33,12 @@ collection = set([])
 for element in originData:
     collection |= set(element)
 
+def list2vector(dictDocument,checkDocument):
+  vector = [0] * len(dictDocument)
+  for k,v in enumerate(checkDocument):
+        if v in dictDocument:
+            vector[dictDocument.index(v)] += 1
+  return vector
+
+
 
